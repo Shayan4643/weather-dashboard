@@ -1,4 +1,4 @@
-const apiKey = "YOUR_API_KEY_HERE";
+const apiKey = "5ba29650e228e558d3089f6396a637a8";
 let timer; // Debouncing ke liye timer reference
 
 const cityInput = document.getElementById("cityInput");
@@ -21,20 +21,21 @@ searchBtn.addEventListener("click", () => {
 
 // Input field par 'input' event listener lagayein
 cityInput.addEventListener("input", () => {
-    const city = cityInput.value.trim();
+  const city = cityInput.value.trim();
 
-    // Purana timer cancel karein agar user dobara type kare
-    clearTimeout(timer);
+  // Purana timer cancel karein agar user dobara type kare
+  clearTimeout(timer);
 
-    if (city.length >= 3) { // Jab kam az kam 3 characters type ho jayein
-        // 600ms ka delay set karein
-        timer = setTimeout(() => {
-            fetchWeatherData(city);
-        }, 600);
-    } else {
-        weatherCard.classList.add("hidden");
-        errorMsg.classList.add("hidden");
-    }
+  if (city.length >= 3) {
+    // Jab kam az kam 3 characters type ho jayein
+    // 600ms ka delay set karein
+    timer = setTimeout(() => {
+      fetchWeatherData(city);
+    }, 600);
+  } else {
+    weatherCard.classList.add("hidden");
+    errorMsg.classList.add("hidden");
+  }
 });
 
 // Enter key press karne par bhi search ho jaye
@@ -75,5 +76,3 @@ function displayWeather(data) {
   humidity.textContent = `${data.main.humidity}%`;
   windSpeed.textContent = `${data.wind.speed} km/h`;
 }
-
-
