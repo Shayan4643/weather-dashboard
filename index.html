@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-lavender-400 to-sky-600 min-h-screen flex items-center justify-center p-4"
+  >
+    <div
+      class="bg-white/90 backdrop-blur-md shadow-2xl rounded-2xl w-full max-w-md p-6"
+    >
+      <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">
+        🌤️ Weather Dashboard
+      </h1>
+
+      <!-- Search Box -->
+      <div class="flex gap-2 mb-6">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter city name..."
+          class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+        <button
+          id="searchBtn"
+          class="bg-sky-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-lavender-700 transition cursor-pointer"
+        >
+          Search
+        </button>
+      </div>
+
+      <!-- Weather Display Card -->
+      <div
+        id="weatherCard"
+        class="hidden text-center bg-indigo-50 p-6 rounded-xl border border-indigo-100"
+      >
+        <h2 id="cityName" class="text-2xl font-bold text-gray-800 mb-1"></h2>
+        <p id="weatherDesc" class="text-gray-600 capitalize mb-4"></p>
+        <div class="text-4xl font-extrabold text-indigo-600 mb-4" id="temp">
+          --°C
+        </div>
+
+        <div
+          class="flex justify-around text-sm text-gray-700 border-t pt-4 border-indigo-200"
+        >
+          <div>
+            <span class="block font-semibold">Humidity</span>
+            <span id="humidity">--%</span>
+          </div>
+          <div>
+            <span class="block font-semibold">Wind Speed</span>
+            <span id="windSpeed">-- km/h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error Message -->
+      <p id="errorMsg" class="hidden text-red-500 text-center font-medium mt-4">
+        City not found. Please try again.
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
