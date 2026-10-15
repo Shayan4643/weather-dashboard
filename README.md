@@ -40,8 +40,7 @@ Step 1: Clone or Download the Repository
 Using Git: Open your terminal or command prompt and run the following command:
 
 Bash
-git clone https://github.com/YOUR_USERNAME/weather-dashboard.git
-(Note: Replace YOUR_USERNAME with your actual GitHub username).
+git clone https://github.com/Shayan4643/weather-dashboard.git
 
 Manual Download: Click the green <> Code button at the top of the repository page, click Download ZIP, extract the files, and open the extracted folder.
 
